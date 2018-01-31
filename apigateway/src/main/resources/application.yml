@@ -1,0 +1,30 @@
+spring:
+    application:
+        name: api-gateway
+server:
+    port: 80
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://huanuo.com:8081/eureka/
+  instance:
+    prefer-ip-address: true
+
+
+zuul:
+  routes:
+    auth:
+      path: /uaa/**
+      serviceId: sec
+      sensitiveHeaders:
+  add-proxy-headers: true
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost/uaa/user
+      prefer-token-info: false
+      id: api-gateway
+
+

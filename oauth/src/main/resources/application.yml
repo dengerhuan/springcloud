@@ -1,0 +1,16 @@
+spring:
+    application:
+        name: oauth
+server:
+    port: 8080
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://huanuo.com:8081/eureka/
+  instance:
+    prefer-ip-address: true
+security:
+  user:
+    password: 123123
+

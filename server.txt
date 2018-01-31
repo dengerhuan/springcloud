@@ -1,0 +1,6 @@
+api-gateway    port: 80
+discovery  port: 8081
+app   port: 8082
+oauth   port: 8080
+
+defaultZone: http://huanuo.com:8081/eureka/

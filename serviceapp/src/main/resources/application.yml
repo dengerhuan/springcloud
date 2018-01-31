@@ -1,0 +1,20 @@
+spring:
+    application:
+        name: app
+server:
+    port: 8082
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://huanuo.com:8081/eureka/
+  instance:
+    prefer-ip-address: true
+
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost/uaa/user
+      prefer-token-info: false
+      id: aPP

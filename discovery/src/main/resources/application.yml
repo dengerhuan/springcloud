@@ -1,0 +1,15 @@
+spring:
+    application:
+        name: discovery
+server:
+  port: 8081
+eureka:
+  instance:
+    hostname: huanuo.com
+  server:
+    enable-self-preservation: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  service-url:
+    defaultZone: http://${eureka.instance.hostname}:${server.port}}
