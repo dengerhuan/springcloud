@@ -4,7 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.security.Principal;
 
 @RestController
 public class RestCon {
@@ -14,7 +17,6 @@ public class RestCon {
 
     @GetMapping("name")
     public String name() {
-
         return "dengerhuan";
     }
 
@@ -24,6 +26,11 @@ public class RestCon {
         return "dengerhuan";
     }
 
+    @GetMapping("/user")
+    public Principal user(Principal user) {
+        System.out.println(user);
+        return user;
+    }
 
     @GetMapping("/instance-info")
     public ServiceInstance showInfo() {

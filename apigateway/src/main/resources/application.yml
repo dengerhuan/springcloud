@@ -1,8 +1,25 @@
 spring:
     application:
         name: api-gateway
+    jpa:
+        hibernate:
+          ddl-auto: update
+        show-sql: true
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        username: daily
+        password: mdasil
+        hikari:
+          max-lifetime: 1770000
+          maximum-pool-size: 15
+        url: jdbc:mysql://localhost:3306/daily?characterEncoding=utf8&useSSL=true
 server:
-    port: 80
+    port: 8443
+    ssl:
+      key-store: classpath:keystore.p12
+      key-store-password: 123456
+      key-store-type: PKCS12
+      key-alias: tomcat
 
 eureka:
   client:
@@ -11,20 +28,16 @@ eureka:
   instance:
     prefer-ip-address: true
 
-
-zuul:
-  routes:
-    auth:
-      path: /uaa/**
-      serviceId: sec
-      sensitiveHeaders:
-  add-proxy-headers: true
+logging:
+  level:
+    org.springframework: INFO
 
 security:
   oauth2:
     resource:
-      user-info-uri: http://localhost/uaa/user
+      user-info-uri: http://localhost:8084/user
       prefer-token-info: false
-      id: api-gateway
+
+
 
 

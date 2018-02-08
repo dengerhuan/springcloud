@@ -1,3 +1,4 @@
+/*
 package bigdata.config;
 
 import org.springframework.context.annotation.Configuration;
@@ -21,3 +22,4 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                 .httpBasic();
     }
 }
+*/

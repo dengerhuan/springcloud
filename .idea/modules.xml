@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JPAs/JPAs.iml" filepath="$PROJECT_DIR$/JPAs/JPAs.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/UI4.0.iml" filepath="$PROJECT_DIR$/.idea/UI4.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/actibiti/actibiti.iml" filepath="$PROJECT_DIR$/actibiti/actibiti.iml" />
       <module fileurl="file://$PROJECT_DIR$/apigateway/apigateway.iml" filepath="$PROJECT_DIR$/apigateway/apigateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery/discovery.iml" filepath="$PROJECT_DIR$/discovery/discovery.iml" />
       <module fileurl="file://$PROJECT_DIR$/oauth/oauth.iml" filepath="$PROJECT_DIR$/oauth/oauth.iml" />

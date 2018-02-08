@@ -17,4 +17,8 @@ security:
     resource:
       user-info-uri: http://localhost/uaa/user
       prefer-token-info: false
-      id: aPP
+
+management:
+  security:
+   enabled: false
+

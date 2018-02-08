@@ -1,8 +1,21 @@
 spring:
-    application:
-        name: oauth
+  application:
+    name: uaa
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: daily
+    password: mdasil
+    hikari:
+      max-lifetime: 1770000
+      maximum-pool-size: 15
+    url: jdbc:mysql://localhost:3306/daily?characterEncoding=utf8&useSSL=true
+
 server:
-    port: 8080
+  port: 8084
 
 eureka:
   client:
@@ -10,7 +23,10 @@ eureka:
       defaultZone: http://huanuo.com:8081/eureka/
   instance:
     prefer-ip-address: true
-security:
-  user:
-    password: 123123
 
+logging:
+  level:
+    org.springframework: DEBUG
+
+security:
+  sessions: stateless
